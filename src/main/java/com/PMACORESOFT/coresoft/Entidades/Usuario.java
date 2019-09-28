@@ -65,7 +65,7 @@ public class Usuario implements Serializable {
     private String Password;
 
     @NotEmpty
-    private Boolean Estado;
+    private String Estado;
     @NotNull(message = "No puede estar vacio")
     @Column(nullable = false)
     @Temporal(TemporalType.DATE)
@@ -155,11 +155,11 @@ public class Usuario implements Serializable {
         Password = password;
     }
 
-    public Boolean getEstado() {
+    public String getEstado() {
         return Estado;
     }
 
-    public void setEstado(Boolean estado) {
+    public void setEstado(String estado) {
         Estado = estado;
     }
 
