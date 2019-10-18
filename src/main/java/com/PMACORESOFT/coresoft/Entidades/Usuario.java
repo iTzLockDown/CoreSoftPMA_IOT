@@ -73,7 +73,7 @@ public class Usuario implements Serializable {
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "iot_pma_usuario_authorities", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns =@JoinColumn(name = "role_id") )
-    private List<Rol> roles;
+    private List<Rol> Roles;
 
     public long getId() {
         return id;
@@ -172,10 +172,10 @@ public class Usuario implements Serializable {
     }
 
     public List<Rol> getRoles() {
-        return roles;
+        return Roles;
     }
 
     public void setRoles(List<Rol> roles) {
-        this.roles = roles;
+        this.Roles = roles;
     }
 }
